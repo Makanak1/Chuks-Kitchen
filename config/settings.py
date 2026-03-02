@@ -70,7 +70,7 @@ DATABASES = {
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],  # you can add custom template folders here later
+        'DIRS': [],  
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
