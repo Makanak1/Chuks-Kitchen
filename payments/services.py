@@ -13,7 +13,7 @@ from django.conf import settings
 from django.db import transaction
 from django.utils import timezone
 
-from apps.orders.models import Order
+from orders.models import Order
 from .models import Payment
 
 logger = logging.getLogger('apps.payments')

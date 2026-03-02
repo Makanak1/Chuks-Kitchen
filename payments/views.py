@@ -15,7 +15,7 @@ from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from apps.orders.models import Order
+from orders.models import Order
 from .models import Payment
 from .serializers import PaymentSerializer, InitiatePaymentSerializer
 from .services import PaystackService, PaystackError

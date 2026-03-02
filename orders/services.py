@@ -9,7 +9,7 @@ from decimal import Decimal
 from django.db import transaction
 from django.utils import timezone
 
-from apps.menu.models import Cart, CartItem, FoodItem
+from menu.models import Cart, CartItem, FoodItem
 from .models import Order, OrderItem, DeliveryAddress, OrderStatusHistory
 
 logger = logging.getLogger('apps.orders')

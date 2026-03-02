@@ -31,11 +31,11 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    'apps.users',
-    'apps.menu',
-    'apps.orders',
-    'apps.payments',
-    'apps.notifications',
+    'users',
+    'menu',
+    'orders',
+    'payments',
+    'notifications',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -60,12 +60,28 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        'OPTIONS': {
-            'connect_timeout': 10,
-        },
-        'CONN_MAX_AGE': 60,
+    #     'OPTIONS': {
+    #         'connect_timeout': 10,
+    #     },
+    #     'CONN_MAX_AGE': 60,
     }
 }
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],  # you can add custom template folders here later
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 
 # Redis
 REDIS_URL = os.environ.get('REDIS_URL', 'redis://localhost:6379')
